@@ -23,7 +23,10 @@ let computerScore = 0
 
 
 //Play a round
-function playRound(humanChoice, computerChoice) {
+function playRound() {
+    //Declare variables
+    let humanChoice = getHumanChoice();
+    let computerChoice = getComputerChoice();
 
     //Define which choice beats which
     const outcomes = {
