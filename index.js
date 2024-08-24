@@ -23,4 +23,4 @@ let computerScore = 0
 
 
 //Play a round
-function playRound();
+function playRound( humanChoice , computerChoice );
