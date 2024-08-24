@@ -7,6 +7,7 @@ function getComputerChoice(max) {
 //Print result
 console.log(getComputerChoice(3));
 
+
 //Acknowledge user choice
 function getHumanChoice() {
     const userChoice = window.prompt("Rock, Paper, or Scissors?" , "")
@@ -14,3 +15,8 @@ function getHumanChoice() {
 }
 //Print results
 console.log(getHumanChoice())
+
+
+//Keep track of scores from players and computer
+let humanScore = getHumanChoice
+let computerScore = getComputerChoice
