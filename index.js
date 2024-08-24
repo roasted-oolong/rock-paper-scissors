@@ -49,3 +49,7 @@ playRound();
 
 //Print Scores
 console.log(`You: ${humanScore} | Computer: ${computerScore}`)
+
+
+//Play a whole game
+function playGame();
