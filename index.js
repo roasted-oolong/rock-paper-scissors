@@ -20,3 +20,7 @@ console.log(getHumanChoice())
 //Keep track of scores from players and computer
 let humanScore = 0
 let computerScore = 0
+
+
+//Play a round
+function playRound();
