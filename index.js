@@ -6,3 +6,8 @@ function getComputerChoice(max) {
 }
 //Print result
 console.log(getComputerChoice(3));
+
+//Acknowledge user choice
+function getHumanChoice() {
+    
+}
