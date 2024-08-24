@@ -9,5 +9,7 @@ console.log(getComputerChoice(3));
 
 //Acknowledge user choice
 function getHumanChoice() {
-    
+    const userChoice = window.prompt("Rock, Paper, or Scissors?" , "")
 }
+//Print results
+console.log(getHumanChoice())
