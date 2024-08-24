@@ -1,11 +1,11 @@
 //Computer chooses rock, paper, or scissors
 function getComputerChoice(max) {
-    const choices = ["rock", "paper", "scissors"]
+    const choices = ["rock", "paper:", "scissors"]
     const randomIndex = Math.floor(Math.random() * max);
     return choices[randomIndex]
 }
 //Print result
-console.log(getComputerChoice(3));
+console.log("Computer played " + getComputerChoice(3) + "!");
 
 
 //Acknowledge user choice
@@ -13,8 +13,7 @@ function getHumanChoice() {
     const userChoice = window.prompt("Rock, Paper, or Scissors?" , "")
     return userChoice.toLowerCase()
 }
-//Print results
-console.log(getHumanChoice(""))
+
 
 
 //Keep track of scores from players and computer
@@ -26,7 +25,7 @@ let computerScore = 0
 function playRound() {
     //Declare variables
     let humanChoice = getHumanChoice();
-    let computerChoice = getComputerChoice();
+    let computerChoice = getComputerChoice(3);
 
     //Define which choice beats which
     const outcomes = {
@@ -44,9 +43,9 @@ function playRound() {
     } else {
         ++computerScore //Increase computer's score
         console.log("You lose. Better luck next time!")
-    }   
+    }  
 };
-
+playRound();
 
 //Print Scores
 console.log(`You: ${humanScore} | Computer: ${computerScore}`)
