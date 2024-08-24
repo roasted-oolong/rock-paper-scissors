@@ -43,3 +43,7 @@ function playRound(humanChoice, computerChoice) {
         console.log("You lose. Better luck next time!")
     }   
 };
+
+
+//Print Scores
+console.log(`You: ${humanScore} | Computer: ${computerScore}`)
