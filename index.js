@@ -50,7 +50,6 @@ function playRound() {
     //Print Scores
     console.log(`You: ${humanScore} | Computer: ${computerScore}`)
 };
-playRound()
 
 //Play a whole game
 function playGame() {
@@ -59,3 +58,4 @@ function playGame() {
         playRound();
     }
 };
+playGame();
