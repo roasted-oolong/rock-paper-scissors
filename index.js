@@ -43,13 +43,15 @@ function playRound() {
     } else {
         ++computerScore //Increase computer's score
         console.log("You lose. Better luck next time!")
-    }  
+    } 
+    
+    //Print Scores
+    console.log(`You: ${humanScore} | Computer: ${computerScore}`)
 };
 playRound();
 
-//Print Scores
-console.log(`You: ${humanScore} | Computer: ${computerScore}`)
-
 
 //Play a whole game
-function playGame();
+function playGame() {
+
+};
