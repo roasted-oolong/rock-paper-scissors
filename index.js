@@ -1,6 +1,6 @@
 //Computer chooses rock, paper, or scissors
 function getComputerChoice(max) {
-    const choices = ["rock", "paper:", "scissors"]
+    const choices = ["rock", "paper", "scissors"]
     const randomIndex = Math.floor(Math.random() * max);
     return choices[randomIndex]
 }
@@ -53,5 +53,8 @@ playRound();
 
 //Play a whole game
 function playGame() {
-
+    //Play 5 rounds
+    for (let i = 0; i < 5; i++) {
+        playRound();
+    }
 };
