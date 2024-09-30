@@ -65,3 +65,5 @@ const btns = document.querySelectorAll('button');
 btns.forEach(btn => btn.addEventListener('click', () => {
     playRound();
 }));
+
+const result = document.querySelector('div');
