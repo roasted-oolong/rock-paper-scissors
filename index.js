@@ -58,4 +58,10 @@ function playRound() {
 //         playRound();
 //     }
 // };
-playGame();
+// playGame();
+
+const btn = document.querySelector('button');
+const btns = document.querySelectorAll('button');
+btns.forEach(btn => btn.addEventListener('click', () => {
+    playRound();
+}));
