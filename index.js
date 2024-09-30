@@ -51,11 +51,11 @@ function playRound() {
     console.log(`You: ${humanScore} | Computer: ${computerScore}`)
 };
 
-//Play a whole game
-function playGame() {
-    //Play 5 rounds
-    for (let i = 0; i < 5; i++) {
-        playRound();
-    }
-};
+// //Play a whole game
+// function playGame() {
+//     //Play 5 rounds
+//     for (let i = 0; i < 5; i++) {
+//         playRound();
+//     }
+// };
 playGame();
