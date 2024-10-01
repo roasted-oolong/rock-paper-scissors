@@ -7,15 +7,9 @@ function getComputerChoice(max) {
 
 
 //Acknowledge user choice
-const btnRock = document.querySelector('#rock');
-const btnPaper = document.querySelector('#paper');
-const btnScissors = document.querySelector('#scissors');
-const btns = document.querySelectorAll('button');
-
-const result = document.querySelector('div');
-
+const options = document.querySelector('#options')
 let getHumanChoice = ""
-btns.forEach(btn => btn.addEventListener('click', (e) => {
+options.addEventListener('click', (e) => {
     let target = e.target;
 
     switch(target.id) {
@@ -23,7 +17,7 @@ btns.forEach(btn => btn.addEventListener('click', (e) => {
             getHumanChoice = "rock"
             break;
     }
-}))
+})
 
 //Keep track of scores from players and computer
 let humanScore = 0
@@ -60,7 +54,7 @@ function playRound() {
     } 
     
     //Print Scores
-    const result = document.querySelector('div');
+    const result = document.querySelector('#result');
     console.log(`You: ${humanScore} | Computer: ${computerScore}`)
 };
 
