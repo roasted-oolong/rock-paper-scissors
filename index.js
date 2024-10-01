@@ -7,11 +7,23 @@ function getComputerChoice(max) {
 
 
 //Acknowledge user choice
-function getHumanChoice() {
-    const userChoice = window.prompt("Rock, Paper, or Scissors?" , "")
-    return userChoice.toLowerCase()
-}
+const btnRock = document.querySelector('#rock');
+const btnPaper = document.querySelector('#paper');
+const btnScissors = document.querySelector('#scissors');
+const btns = document.querySelectorAll('button');
 
+const result = document.querySelector('div');
+
+let getHumanChoice = ""
+btns.forEach(btn => btn.addEventListener('click', (e) => {
+    let target = e.target;
+
+    switch(target.id) {
+        case 'rock':
+            getHumanChoice = "rock"
+            break;
+    }
+}))
 
 //Keep track of scores from players and computer
 let humanScore = 0
@@ -21,7 +33,7 @@ let computerScore = 0
 //Play a round
 function playRound() {
     //Declare variables
-    let humanChoice = getHumanChoice();
+    let humanChoice = getHumanChoice;
     let computerChoice = getComputerChoice(3);
 
     //Define which choice beats which in a "this beats that" format
@@ -48,6 +60,7 @@ function playRound() {
     } 
     
     //Print Scores
+    const result = document.querySelector('div');
     console.log(`You: ${humanScore} | Computer: ${computerScore}`)
 };
 
@@ -59,11 +72,3 @@ function playRound() {
 //     }
 // };
 // playGame();
-
-const btn = document.querySelector('button');
-const btns = document.querySelectorAll('button');
-btns.forEach(btn => btn.addEventListener('click', () => {
-    playRound();
-}));
-
-const result = document.querySelector('div');
