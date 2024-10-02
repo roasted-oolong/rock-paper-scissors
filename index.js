@@ -23,7 +23,8 @@ document.getElementById('scissors').addEventListener('click', () => {
 //Keep track of scores from players and computer
 let humanScore = 0
 let computerScore = 0
-let humahchoice = ""
+let humanchoice = ""
+const divResult = document.getElementById('result');
 
 
 //Play a round
@@ -38,34 +39,41 @@ function playRound() {
     };
 
     // Print computer + human choices
-    console.log("You played " + humanChoice);
-    console.log("Computer played " + computerChoice + "!");
-    // console.log("Outcome according to human choice:", outcomes[humanChoice]); //To troubleshoot functionlity
+    const referee = document.createElement('p');
 
     //Determine winner of this round
     if (humanChoice === computerChoice) {
-        console.log("It's a tie!");
+        referee.textContent = `It's a tie. You played ${humanChoice}. Computer played ${computerChoice}.`
+        divResult.appendChild(referee);
     } else if (outcomes[humanChoice] === computerChoice) {
         ++humanScore //Increase player's score
-        console.log("You win!")
+        referee.textContent = `You win this round! You played ${humanChoice}. Computer played ${computerChoice}.`
+        divResult.appendChild(referee);
     } else {
         ++computerScore //Increase computer's score
-        console.log("You lose. Better luck next time!")
+        referee.textContent = `Better luck next round. You lose! You played ${humanChoice}. Computer played ${computerChoice}.`
+        divResult.appendChild(referee);
     } 
     
     //Print Scores
-    const divResult = document.getElementById('result');
+    const runningScore = document.createElement('p');
+    runningScore.textContent = `You: ${humanScore} | Computer: ${computerScore}`
+    divResult.appendChild(runningScore);
+};
+
+function finishGame() {
+    const victoryMessage = document.createElement('h1');
     if (humanScore === 5) {
-        const result = document.createElement('p').textContent = "You win!";
-        divResult.appendChild(result);
+        victoryMessage.textContent = `VICTORY! ${humanScore} to ${computerScore}!`;
+        divResult.appendChild(victoryMessage);
     } else if (computerScore === 5) {
-        const result = document.createElement('p').textContent = "You lose. Better luck next time!";
-        divResult.appendChild(result);
+        victoryMessage.textContent = `DEFEAT. ${humanScore} to ${computerScore}.`;
+        divResult.appendChild(victoryMessage);
     } else {
         //do nothing
     }
-    console.log(`You: ${humanScore} | Computer: ${computerScore}`)
-};
+}
+finishGame();
 
 // //Play a whole game
 // function playGame() {
