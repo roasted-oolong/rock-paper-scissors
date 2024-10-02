@@ -59,6 +59,8 @@ function playRound() {
     const runningScore = document.createElement('p');
     runningScore.textContent = `You: ${humanScore} | Computer: ${computerScore}`
     divResult.appendChild(runningScore);
+
+    finishGame();
 };
 
 function finishGame() {
@@ -67,13 +69,12 @@ function finishGame() {
         victoryMessage.textContent = `VICTORY! ${humanScore} to ${computerScore}!`;
         divResult.appendChild(victoryMessage);
     } else if (computerScore === 5) {
-        victoryMessage.textContent = `DEFEAT. ${humanScore} to ${computerScore}.`;
+        victoryMessage.textContent = `DEFEAT ${humanScore} to ${computerScore}.`;
         divResult.appendChild(victoryMessage);
     } else {
         //do nothing
     }
 }
-finishGame();
 
 // //Play a whole game
 // function playGame() {
