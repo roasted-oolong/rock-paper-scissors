@@ -7,27 +7,27 @@ function getComputerChoice(max) {
 
 
 //Acknowledge user choice
-const options = document.querySelector('#options')
-let getHumanChoice = ""
-options.addEventListener('click', (e) => {
-    let target = e.target;
-
-    switch(target.id) {
-        case 'rock':
-            getHumanChoice = "rock"
-            break;
-    }
+document.getElementById('rock').addEventListener('click', () => {
+    humanChoice = "rock";
+    playRound();
+})
+document.getElementById('paper').addEventListener('click', () => {
+    humanChoice = "paper";
+    playRound();
+})
+document.getElementById('scissors').addEventListener('click', () => {
+    humanChoice = "scissors";
+    playRound();
 })
 
 //Keep track of scores from players and computer
 let humanScore = 0
 let computerScore = 0
+let humahchoice = ""
 
 
 //Play a round
 function playRound() {
-    //Declare variables
-    let humanChoice = getHumanChoice;
     let computerChoice = getComputerChoice(3);
 
     //Define which choice beats which in a "this beats that" format
