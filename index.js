@@ -54,7 +54,16 @@ function playRound() {
     } 
     
     //Print Scores
-    const result = document.querySelector('#result');
+    const divResult = document.getElementById('result');
+    if (humanScore === 5) {
+        const result = document.createElement('p').textContent = "You win!";
+        divResult.appendChild(result);
+    } else if (computerScore === 5) {
+        const result = document.createElement('p').textContent = "You lose. Better luck next time!";
+        divResult.appendChild(result);
+    } else {
+        //do nothing
+    }
     console.log(`You: ${humanScore} | Computer: ${computerScore}`)
 };
 
